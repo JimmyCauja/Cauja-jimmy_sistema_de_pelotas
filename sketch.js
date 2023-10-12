@@ -1,13 +1,18 @@
-let miPelota;
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  miPelota = new Pelota();
+  noLoop();
 }
 
 function draw() {
-  background(200);
-  circle(mouseX, mouseY, 20);
-  miPelota.update(300);
-  miPelota.display();
+  background(20, 150, 200);
+  noStroke();
+  let anchura = 50;
+  let gap = 20;
+
+  for (let posX = 10; posX < windowWidth; posX += anchura + gap) {
+    for (let posY = 10; posY < windowHeight; posY += anchura + gap) {
+      square(posX, posY, anchura);
+    }
+  }
 }
+
