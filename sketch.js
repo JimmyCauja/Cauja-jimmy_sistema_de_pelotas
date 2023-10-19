@@ -7,7 +7,7 @@ function setup() {
 print(pelotas);
 
 function draw() {
-  background(150, 140, 254);
+  background(7, 25, 82);
   for (let i = 0; i < pelotas.length; i++) {
     pelotas[i].update(windowHeight);
     pelotas[i].display();

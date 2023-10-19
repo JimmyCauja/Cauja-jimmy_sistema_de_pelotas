@@ -7,7 +7,7 @@ class Pelota{
         this.acelY = 0.98;
         this.diam = int(random(5, 50));
         this.radio = this.diam / 2;
-        this.colorin = color(20, random(100, 255), random(0, 150));
+        this.colorin = color(50, random(53, 160), random(151, 250));
 
         print("Hola, estoy vive!");
     }
@@ -18,6 +18,7 @@ class Pelota{
         } else {
             this.velY *= -1;
             this.posY += this.velY;
+            this.colorin = color(50, random(53, 160), random(151, 250));
         }
 
         if (this.posX > windowWidth) {
