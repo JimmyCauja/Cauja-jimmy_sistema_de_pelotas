@@ -5,7 +5,7 @@ class Pelota{
         this.velX = random(-20, 20);
         this.velY = 0,0;
         this.acelY = 0.98;
-        this.diam = int(random(5, 50));
+        this.diam = int(random(5, 75));
         this.radio = this.diam / 2;
         this.colorin = color(50, random(53, 160), random(151, 250));
 
