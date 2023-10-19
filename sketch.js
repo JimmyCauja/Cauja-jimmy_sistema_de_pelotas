@@ -1,18 +1,14 @@
 pelotas = [];
-const NP = 1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 0; i < NP; i++){
-    let pelota = new Pelota();
-    pelotas.push(pelota);
-  }
+  print(pelotas);
 }
 print(pelotas);
 
 function draw() {
   background(150, 140, 254);
-  for (let i = 0; i < NP; i++) {
+  for (let i = 0; i < pelotas.length; i++) {
     pelotas[i].update(windowHeight);
     pelotas[i].display();
 }

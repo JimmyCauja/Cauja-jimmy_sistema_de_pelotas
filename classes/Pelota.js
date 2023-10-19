@@ -1,9 +1,9 @@
 class Pelota{
-    constructor() {
+    constructor(_x,_y) {
         this.posX = random(50, windowWidth - 50);
-        this.posY = random(50, 70);
-        this.velX = random(-1, 1);
-        this.velY = 0;
+        this.posY = random(10, 130);
+        this.velX = random(-20, 20);
+        this.velY = 0,0;
         this.acelY = 0.98;
         this.diam = int(random(5, 50));
         this.radio = this.diam / 2;
@@ -19,6 +19,14 @@ class Pelota{
             this.velY *= -1;
             this.posY += this.velY;
         }
+
+        if (this.posX > windowWidth) {
+			this.velX *= -1;
+		}
+		if (this.posX < 0) {
+			this.velX *= -1;
+		}
+		this.posX += this.velX;
     }
 
     display() {
